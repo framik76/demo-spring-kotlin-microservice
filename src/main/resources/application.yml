@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: demo-spring-kotlin-microservice
+management:
+  endpoint:
+    health:
+      show-details: always
+      probes:
+        enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
