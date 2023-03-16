@@ -1,14 +1,14 @@
 package com.example.demo.controller
 
-import com.example.demo.service.HealthService
+import com.example.demo.service.DemoService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class HealthController (val healthService: HealthService) {
+class DemoController (val demoService: DemoService) {
 
-    @GetMapping("/healthz")
+    @GetMapping("/demo")
     fun health(): String {
-        return healthService.getHealthMessage()
+        return demoService.getHealthMessage()
     }
 }
